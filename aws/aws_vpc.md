@@ -1,12 +1,3 @@
----
-title: 'Section 8: VPCs (and some advanced networking)'
-updated: 2021-08-29 14:03:50Z
-created: 2021-08-25 07:51:59Z
-source: >-
-  https://docs.aws.amazon.com/vpc/latest/privatelink/endpoint-service-overview.html
-author: adeeb.armalite@gmail.com
----
-
 **Intro**
 
 - a subnet belongs to 1 AZ
