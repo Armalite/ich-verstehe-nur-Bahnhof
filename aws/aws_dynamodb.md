@@ -37,40 +37,29 @@
     - IAM policies and roles
     - VPC endpoints
 
-**Aurora**
+ - Create table
+ ```bash
+ aws dynamodb create-table \
+    --table-name MusicCollection \
+    --attribute-definitions AttributeName=Artist,AttributeType=S AttributeName=SongTitle,AttributeType=S \
+    --key-schema AttributeName=Artist,KeyType=HASH AttributeName=SongTitle,KeyType=RANGE \
+    --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 \
+    --tags Key=Owner,Value=blueTeam
+ ```
 
-- 5x performance compared to MySQL, 3x to PostGres
-- 2 copies of data across 3 AZ. 6 copies in total
-- 15 Amazon Aurora replicas
-- Aurora: in region
-- No data loss during failover
-- Instant replication / low delay
-- Automated backups always enabled, does not impact performance
-- Can take snapshots of Aurora - does not impact performance (can share with other aws accounts too)
-- Amazon Aurora Serverless - on-demand, autoscaling
-    - mysql, postgres compatible
-    - Cost-effective option for infrequent, intermittent or unpredictable workloads
 
-**Elasticache**
+  - Retrieve an item from the MusicCollection table. The table has hash and range PK (Artist and SongTitle), so both attributes need to be specified. Also output read capacity consumed by the operation.
+  ```bash
+   aws dynamodb get-item \
+       --table-name MusicCollection \
+       --key file://key.json \
+       --return-consumed-capacity TOTAL
+  ```
 
-- Web service that makes it easy to deploy operate and scale an in memory cache in the cloud
-- Fast - doesnt have to go to db to get info
-- memcached / redis
-- redis = no multithreaded performance, but good if you need backup restore and multi-az stuff
-- Caching engine
-- *You should store session in dynamodb* - shares user cached metadata across instances
-
-**DMS - Database Migration Service**
-
-- homogenous vs heterogenous migrations
-- SCT = schema conversion tool
-
-**EMR**
-
-- Process vast amounts of data using open source tools (Spark, Hive etc.)
-- Cluster = group of ec2 instance
-- Each node a role
-- Master node
-- Core node
-- Task node
-- S3 storage - must be set up when creating the cluster
+  Contents of key.json:
+  ```json
+   {
+       "Artist": {"S": "Acme Band"},
+       "SongTitle": {"S": "Happy Day"}
+   }
+  ```
