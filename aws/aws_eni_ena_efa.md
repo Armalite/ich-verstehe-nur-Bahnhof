@@ -1,0 +1,25 @@
+**ENI vs ENA vs EFA**
+
+- ENI - network interface. can be attached detached etc.
+    - Addresses
+        - A primary private IPv4 adress from the IPv4 range of the VPC
+        - One ore more secondary IPv4 addresses from the VPC range
+        - One EIP per private IPv4 address
+        - One public IPv4 address
+        - One or more IPv6 addresses
+        - One or more SG
+        - A MAC address
+    - Scenarios
+        - Management network
+        - Use network and security appliances in your VPC
+        - Create dual homes instances with workloads.roles on distinct subnets
+        - Create a low budget high availability solution
+- EN - enhanced networking
+    - Single root I/O virtualization (SR-IOV) - higher IOP performance and lower CPU utilization, compared to traditional ENI
+    - Good network performance
+    - Elastic Network Adapter (ENA) - up to 100Gbps
+    - Virtual Function (VF) interface - up to 10Gbps. Older instances. ENA preferred
+- EFA - elastic fabric adapter. Can be attached to ec2 instances to allow high performance computing (HPC) / machine learning
+    - HPC & machine learning applications
+    - Providers lower and more consistent latency and higher throughput than the TCP transport traditionally used in cloud based HPC systems
+    - Can use OS-bypass - enables HPC and ML applications to bypass the OS kernel to communicate directly with the EFA device. It makes it a lot faster with a lot lower latency. Only linux
