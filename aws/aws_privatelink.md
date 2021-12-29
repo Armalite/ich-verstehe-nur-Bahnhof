@@ -27,7 +27,8 @@
             - The private IP address of the endpoint network interface in the VPC is directly reachable to access the service in and across Availability Zones, in the same way the zonal-specific DNS hostname is.
     - Service providers that use zonal DNS hostnames to access the service can help achieve high availability by enabling cross-zone load balancing. Cross-zone load balancing enables the load balancer to distribute traffic across the registered targets in all enabled Availability Zones.
 
-![](_resources/447e56cf458cccd1a71e8edad158459c.png)
+    ![](_resources/447e56cf458cccd1a71e8edad158459c.png)
+
 **Deploying AWS Privatelink (Advanced details)**
 
 - **AWS Privatelink Considerations**
