@@ -1,4 +1,4 @@
-## Prefect Triggers
+# Prefect Triggers
 
 Trigger a flow based on a state or state change of another flow. e.g. when all upstream tasks have succeeded. Can also use other state conditionals e.g. 'any upstream task succeeds' --> Many available [functions](https://docs.prefect.io/api/latest/triggers.html#functions) for this. The `flow.set_reference_tasks()` function sets the success task to the reference task below to repesent the overall state of the flow
 ```python

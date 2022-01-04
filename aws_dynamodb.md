@@ -1,4 +1,4 @@
-## AWS DynamoDB
+# AWS DynamoDB
 
 - Dynamo DBAccelerator (DAX)
     - 10x performance improvement

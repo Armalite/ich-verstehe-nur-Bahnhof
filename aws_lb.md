@@ -1,4 +1,4 @@
-**Load Balancers**
+# Load Balancers
 
 - Connect to public subnets (at least 2)
 - Directs traffic to the healthy points

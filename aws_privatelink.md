@@ -1,4 +1,5 @@
-**AWS PrivateLinks** (advanced networking notes in here)
+# AWS PrivateLinks
+...and some advanced networking notes in here
 
 - Exposes a service VPC to tens, hundreds or thousands of customer VPCs
 - Does not require VPC peering, no RT, NAT, IGWs etc.

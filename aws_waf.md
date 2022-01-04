@@ -1,4 +1,4 @@
-**AWS WAF**
+# AWS WAF - Web Application Firewall
 
 - Web application firewall
 - Monitor HTTP requests

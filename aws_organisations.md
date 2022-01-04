@@ -1,4 +1,4 @@
-**AWS Organizations & Consolidated Billing**
+# AWS Organizations & Consolidated Billing
 
 - Always have MFA on root account
 - AWS Organization

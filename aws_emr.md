@@ -1,4 +1,4 @@
-## EMR
+# EMR
 
 - Process vast amounts of data using open source tools (Spark, Hive etc.)
 - Cluster = group of ec2 instance

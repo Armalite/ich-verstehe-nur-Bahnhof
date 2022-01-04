@@ -1,4 +1,4 @@
-## AWS Highly Available Bastions
+# AWS Highly Available Bastions
 
 - NLB (with static IP) routing to 2 Bastions in 2 public subnets/AZs (each of which can connect to the instance on the private subnet)
 - Cheap option:

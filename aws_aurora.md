@@ -1,4 +1,4 @@
-## AWS Aurora
+# AWS Aurora
 
 - 5x performance compared to MySQL, 3x to PostGres
 - 2 copies of data across 3 AZ. 6 copies in total

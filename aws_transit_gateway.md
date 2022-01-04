@@ -1,4 +1,4 @@
-**AWS Transit Gateway**
+# AWS Transit Gateway
 
 - Like a hub and spoke model
 - Single interface for all stuff to connect to

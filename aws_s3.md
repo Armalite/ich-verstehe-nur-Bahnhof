@@ -1,4 +1,4 @@
-**S3**
+# AWS S3
 
 - 0 bytes to 5TB files
 - S3 is a universal namespace - must have unique name

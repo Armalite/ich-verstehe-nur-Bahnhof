@@ -1,4 +1,4 @@
-## AWS EC2 - Elastic Compute Cloud
+# AWS EC2 - Elastic Compute Cloud
 
 **EC2 101**
 

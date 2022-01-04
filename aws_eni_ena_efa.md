@@ -1,4 +1,4 @@
-## ENI vs ENA vs EFA
+# ENI vs ENA vs EFA
 
 - ENI - network interface. can be attached detached etc.
     - Addresses

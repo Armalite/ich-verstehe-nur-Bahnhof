@@ -1,4 +1,4 @@
-**Security Groups Basics**
+# AWS Security Groups Basics
 
 - Port 80 http port
 - Security group - can view inbound rules - which ports are open to which source

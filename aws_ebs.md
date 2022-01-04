@@ -1,4 +1,4 @@
-## AWS Elastic Block Store
+# AWS Elastic Block Store
 
 **EBS 101**
 
