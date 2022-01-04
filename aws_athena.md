@@ -1,4 +1,4 @@
-**Athena**
+# Amazon Athena
   - Interactive query service - use SQL to query data located in S3
   - Serverless
   - Pay per query / per TB scanned
