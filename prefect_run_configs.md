@@ -1,5 +1,6 @@
 # Prefect RunConfigs
 
+## Setting run configs
 Determines how to execute a flow. Using this a runconfig can be set based on a local run vs. a k8s run on a remote cluster.
 
 Basic run config declaration
@@ -38,4 +39,19 @@ with Flow(FLOW_NAME,
           storage=set_storage(FLOW_NAME),
           run_config=set_run_config(),
           ) as flow:
+```
+
+## Labelling RunConfigs
+
+Run configs can be labelled in the constructor (or attributed later). Labels can be used to determine whether an agent can execute a flow or not.
+e.g.
+```python
+from prefect import Flow
+from prefect.run_configs import LocalRun
+
+# Configure a flow with a `dev` label
+my_beautiful_flow = Flow(
+    "example",
+    run_config=LocalRun(labels=["sandbox", "lab"])
+)
 ```
