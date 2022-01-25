@@ -37,3 +37,12 @@ resource "aws_ec2" "beautiful_ec2_instance" {
 }
 ```
 The above example sets the `count` to 1 if the variable is not null, which causes terraform to provision it. If the variable is null, the `count` gets set to 0, and the resource is not provisioned.
+Keep in mind that if you use `count` inside a resource, whenever you reference this resource you will need to access it via a list by the first instance of a list. e.g. based on the ec2 instance specified in the above example, you would access this instance as such:
+
+```hcl
+resource "some_resource" "some_resource_name" {
+
+  ec2_id = aws_ec2.beautiful_ec2_instance[0].id
+  # ...
+}
+```
