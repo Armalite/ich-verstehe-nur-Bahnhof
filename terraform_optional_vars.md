@@ -12,3 +12,17 @@ variable my_list_var {
 
 }
 ```
+
+If you have a variable of type object, and wish to have optional fields within this object, you can use the experimental optional() declaration within the variable:
+```hcl
+variable my_object_var {
+
+  description = "A variable containing a list of strings"
+  type        = object({
+      name = optional(string)
+  })
+
+}
+```
+
+In the above example, the name field of the variable object is optional. The variable itself, however, is still required. If you wish the variable to also be optional, since this is an object you will need to set its default to null, i.e. `default = null`. You will then need to check for null in resources that utilize this variable.
