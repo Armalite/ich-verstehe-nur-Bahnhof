@@ -26,3 +26,14 @@ variable my_object_var {
 ```
 
 In the above example, the name field of the variable object is optional. The variable itself, however, is still required. If you wish the variable to also be optional, since this is an object you will need to set its default to null, i.e. `default = null`. You will then need to check for null in resources that utilize this variable.
+
+
+If you wish to provision a resource based on whether a variable has been set to null or not (i.e. dont provision if null), then make use of the 'count' function of terraform:
+
+```hcl
+resource "aws_ec2" "beautiful_ec2_instance" {
+  count = var.my_object_var != null ? 1 : 0
+  # ...
+}
+```
+The above example sets the `count` to 1 if the variable is not null, which causes terraform to provision it. If the variable is null, the `count` gets set to 0, and the resource is not provisioned.
