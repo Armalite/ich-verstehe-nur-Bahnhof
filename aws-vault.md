@@ -11,7 +11,7 @@ My preference was to install directly using Homebrew on macOS: `brew install aws
 ## AWS profile
 This is an example, similar to what my `~/.aws/config` looks like that relies on MFA auth based on a default profile and various role assumptions:
 
-```
+```bash
 [default]
 region = us-east-1
 output = json
