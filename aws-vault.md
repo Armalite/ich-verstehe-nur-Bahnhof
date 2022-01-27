@@ -63,17 +63,33 @@ mfa_serial = arn:aws:iam::000000000000:mfa/adeeb@beautiful.com
 ```
 
 ## Assuming Role
-Using the example AWS config from the previous section, I can assume any of those roles based on the profile name, e.g.: `aws-vault exec beautiful-data-platforms-test`
-Once the temporary credentials expire, it is worth unsetting the environment variable AWS_VAULT with `unset AWS_VAULT` before running `aws-vault exec ...` again.
+Using the example AWS config from the previous section, I can assume any of those roles based on the profile name, e.g.:
+```bashrc
+aws-vault exec beautiful-data-platforms-test
+```
+Once the temporary credentials expire, it is worth unsetting the environment variable AWS_VAULT with
+```bash
+unset AWS_VAULT
+```
+before running `aws-vault exec ...` again.
 Alternatively you can always set up aliases to shorten some of these commands or combine them.
 
 ## Adding more profiles/accounts
-You can do this directly by editing the ~/.aws/config OR you can use the built in aws-vault command: `aws-vault add <profile>`
+You can do this directly by editing the ~/.aws/config OR you can use the built in aws-vault command:
+```bash
+aws-vault add <profile>
+```
 
 ## Quality of life aliases
 ### Short aws-vault exec
-Shortening the overall `aws-vault exec` command with the following alias: `alias ae="aws-vault exec" >> .bashrc`
-Usage: `ae beautiful-data-platforms-test`
+Shortening the overall `aws-vault exec` command with the following alias:
+```bash
+alias ae="aws-vault exec" >> .bashrc
+```
+Usage:
+```bash
+ae beautiful-data-platforms-test
+```
 
 # Run AWS CLI command as a profile
 You can run AWS cli commands AS a particular role. This can be added to bash scripts, Make files etc.
