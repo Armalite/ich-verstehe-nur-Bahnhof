@@ -2,7 +2,7 @@
 
 Function calls and other commands can be chained in the helm config by piping (pipelines) one command to the next
 e.g.
-```Helm
+```Go
 apiVersion: v1
 kind: ConfigMap
 metadata:
