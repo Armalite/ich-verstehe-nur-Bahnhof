@@ -60,5 +60,5 @@ with open(f'private.key', 'w') as f:
 Short version of the pem file generation:
 ```python
 private_key_content = '''-----BEGIN PRIVATE KEY-----\n''' + \
-              base64.b64encode(key_val["SecretBinary"]).decode('utf-8') + '''\n-----END PRIVATE KEY-----'''
+              base64.b64encode(secret_content["SecretBinary"]).decode('utf-8') + '''\n-----END PRIVATE KEY-----'''
 ```
