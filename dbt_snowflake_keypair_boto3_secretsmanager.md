@@ -29,6 +29,8 @@ default:
 ## Fetch Secret
 You can use Python's boto3 library to interact with AWS resources. If you have stored your private key within a AWS Secrets Manager secret, you can fetch the secret value using the boto3 library. Here we will show you how to deal with a private key stored in a SecretBinary secret in AWS Secrets Manager. You can achieve much of this within a single line, but it steps such as base encoding is separated out for readibility
 
+Note that this solution assumes that your secret is stored as a SecretBinary in AWS Secrets Manager
+
 ```python
 import boto3
 
