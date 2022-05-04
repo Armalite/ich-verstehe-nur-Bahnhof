@@ -15,6 +15,7 @@
 
 **EC2 Notes** 
 
+
 - AMI - Amazon Machine Image
 - Protect against accidental termination option 🙂
 - EBS volume types - root volume can only use SSD or magnetic, but not cold HDD or optimized HDD
