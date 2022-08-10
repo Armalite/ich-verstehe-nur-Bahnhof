@@ -17,13 +17,13 @@ github_api = Github(
     base_url=settings.github_api_base_url
 )
 github_repo = github_api.get_repo(repository_id)
-prefect_deployer_check_run = github_repo.create_check_run("prefect-deployer-check", head_sha)
+my_check_run = github_repo.create_check_run("my-app-check", head_sha)
 ```
 
 ### Setting check run to success
 The below example edits the check run and sets it to complete
 ```Python
 # Set check run to complete
-if prefect_deployer_check_run:
-    prefect_deployer_check_run.edit(conclusion="success")
+if my_check_run:
+    my_check_run.edit(conclusion="success")
 ```
