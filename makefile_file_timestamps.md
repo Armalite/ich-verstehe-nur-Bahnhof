@@ -5,6 +5,8 @@ Inside a make target you can compare the timestamps of two different files and d
 compare:
 	FILE1=$$(stat -f "%Sm" -t "%m%d%H%M%y" file1.yml);\
     FILE2=$$(stat -f "%Sm" -t "%m%d%H%M%y" file2.yml);\
+    echo "FILE1 timestamp is $$FILE1"
+    echo "FILE2 timestamp is $$FILE2"
 	if [ $$FILE1 -gt $$FILE2 ];\
 	then\
 		echo FILE1 has been modified more recently than FILE2;\
